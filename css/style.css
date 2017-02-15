@@ -1,0 +1,196 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+html,.content,.fullScreen{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.content{
+	padding: 0;
+	margin: 0;
+}
+/*
+	为四个背景墙添加背景图片
+ */
+.content>.block_1{
+	position: relative;
+	background-image: url("../img/1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.content>.block_2{
+	background-image: url("../img/2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.content>.block_3{
+	background-image: url("../img/3.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.content>.block_4{
+	background-image: url("../img/4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/*
+	设置四个小点的样式
+ */
+.content>.point{
+	/*设置位置使整体垂直居中*/
+	width: 16px;
+	height: 155px;
+	position: fixed;
+	top: 50%;
+	left: 30px;
+	margin-top: -85px;
+}
+.content>.point>ul>li{
+	/*设置每个小点的样式*/
+	cursor: pointer;
+	list-style: none;
+	width: 16px;
+	height: 16px;
+	border: 3px solid #fff;
+	border-radius: 11px;
+	margin: 18px 9px;
+}
+.content .on{
+	/*设置当前选中小点的样式*/
+	background-color: #fff;
+}
+/*关于我样式*/
+.content>.block_1>.about_me{
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	margin-top: -150px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+/*个人头像*/
+.about_me>.user_pic{
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top:-50px;
+	background-image: url("../img/user.jpg");
+	background-size: 400px 400px;
+	background-repeat: no-repeat;
+	border-radius: 200px;
+}
+/*个人简介*/
+.about_me>.user_info{
+	width: 600px;
+	height: 300px;
+	position: absolute;
+}
+@media screen and (max-width: 1920px) {
+	/*对个人头像和个人简介部分做分辨率适应*/
+	.about_me>.user_pic{
+		left: 340px;
+	}
+	.about_me>.user_info{
+		right: 200px;
+	}
+}
+@media screen and (max-width: 1590px) {
+	/*对个人头像和个人简介部分做分辨率适应*/
+	.about_me>.user_pic{
+		left: 240px;
+	}
+	.about_me>.user_info{
+		right: 150px;
+	}
+}
+@media screen and (max-width: 1425px) {
+	/*对个人头像和个人简介部分做分辨率适应*/
+	.about_me>.user_pic{
+		left: 190px;
+	}
+	.about_me>.user_info{
+		right: 20px;
+	}
+}
+@media screen and (max-width: 1235px) {
+	/*对个人头像和个人简介部分做分辨率适应*/
+	.about_me>.user_pic{
+		left: 130px;
+	}
+	.about_me>.user_info{
+		right: 20px;
+	}
+}
+/*个人简介——名称，信息，按钮组*/
+.user_info>.user_name{
+	width: 340px;
+	height: 70px;
+	margin:20px 0px 25px 0px;
+	font-size: 36px;
+    	line-height: 70px;
+    	color: yellow;
+}
+.user_info>.user_message{
+	width: 500px;
+	height: 120px;
+}
+.user_info>.btn_group{
+	width: 100%;
+	height: 65px;
+}
+.user_info>.user_message>p{
+	text-align: justify;
+	color: #F8F8F8;
+}
+/*按钮样式*/
+.btn{
+	display: inline-block;
+	text-decoration: none;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	margin-top:10px;
+	margin-right: 10px;
+	color: #F8F8F8;
+	-webkit-transition: all 0.5s, width 0.5s, padding-left 0.2s, padding-right 0.2s;
+  	-moz-transition: all 0.5s, width 0.5s, padding-left 0.2s, padding-right 0.2s;
+  	-ms-transition: all 0.5s, width 0.5s, padding-left 0.2s, padding-right 0.2s;
+  	transition: all 0.5s, width 0.5s, padding-left 0.2s, padding-right 0.2s;
+}
+.btn_sm{
+	width: 80px;
+}
+.btn_lg{
+	width: 100px;
+}
+.btn_orange{
+	border: 2px #ec971f solid;
+}
+.btn_orange:hover,.btn_orange:focus,.btn_orange:active{
+    background-color: #ec971f;
+}
+.btn_blue{
+	border: 2px #3071a9 solid;
+}
+.btn_blue:hover,.btn_blue:focus,.btn_blue:active{
+    background-color: #3071a9;
+}
+.btn_red{
+	border: 2px #c9302c solid;
+}
+.btn_red:hover,.btn_red:focus,.btn_red:active{
+    background-color: #c9302c;
+}
+.btn_green{
+	border: 2px #449d44 solid;
+}
+.btn_green:hover,.btn_green:focus,.btn_green:active{
+    background-color: #449d44;
+}
